@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JOB</title>
+        <link rel = "icon" href =
+                "https://cdn-icons-png.flaticon.com/512/3194/3194461.png"
+              type = "image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <div id="header">
+            <div class="logo">
+            </div>
+
+            <div class="link">
+
+
+
+                <div style="display:flex;text-align: start;">
+                    <div style="margin-left:-890px;">
+                        <div  id="mySidebar" class="sidebar" style="height:300px">
+                            <a  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a title="View Students Records" id="show" href="/list_users"><i style="color:green" class="fa fa-eye"></i>&nbsp;View Students</a>
+                            <a title="View Teacher Records" href="/list_teachers"><i style="color:green" class="fa fa-eye"></i>&nbsp;View Teachers</a>
+                            <a title="Add Teachers"  href="/teacher"><i style="color:black" class="fa fa-user"></i>&nbsp; Teacher</a>
+                            <a title="Removed Teacher" href="/updateTeacher"><img style="color:red;width:20px" src="https://cdn-icons-png.flaticon.com/512/1601/1601884.png"></img>&nbsp;Update Teacher</a>
+                            <a title="Remove Students" href="/updateStudent"><img style="color:red;width:20px" src="https://cdn-icons-png.flaticon.com/512/1601/1601884.png"></img>&nbsp; Update Student</a>
+                            <a title="LogOut now" href="/LogOut"><img style="width:30px" src="https://cdn-icons-png.flaticon.com/512/1828/1828490.png" alt="">&nbsp;<p style="margin-left:37px;margin-top:-40px">LogOut</p> </a>
+
+
+
+                        </div>
+
+
+                        <div id="main">
+                            <button class="openbtn" onclick="openNav()">&#9776;Menu</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <p id="home"><i  style="color:green;" class="fa fa-home"></i>&nbsp;
+                    HomePage</p>
+
+
+                <p id="RESOURCES"
+                ><i class="fa fa-id-card " style="color:green;"></i>&nbsp;
+                    Registration</p>
+
+
+                <p id="job"><i style="color:green" class="fa fa-briefcase"></i>
+                    &nbsp; Job Guarantee</p>
+
+                <p id="training"><i style="color:green" class="fa fa-user"></i>&nbsp;
+                    About</p>
+
+                <p id="hire"><i class="fa fa-phone" style="color:green"></i>&nbsp;Contact Us</p>
+
+            </div>
+        </div>
+        <div id="header-2">
+
+
+
+            <div class="logo-2">
+                <div style="display:flex;width:70%">
+                    <div style="display:flex;width:40%;">
+                        <img
+                            src="https://www.simplilearn.com/ice9/new_logo.svgz"
+                            width="150px">
+                        <button type="button" class="All_Cources"
+                            style="margin-left: 20px;">
+                            <span>
+                                <i class="fa fa-th"></i>
+                                <h4 style="margin-right:10px">All Cources</h4>
+                            </span>
+                        </button>
+                    </div>
+                    <div style="display:flex;width:50%">
+                        <input type="text" style="padding-left:4%;
+                            margin-left:10px;"
+                            placeholder="&#128269 what do you want learn?"
+                            class="search">
+                    </div>
+                </div>
+                <div class="link-2">
+                    <button class="login" title="Login">
+                        <a href="index.html">Log in </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- for the mid-header -->
+        <div class="mid-header">
+            <div style=" margin-left:750px">
+                <img style="width: 80%;"
+                    src="https://www.simplilearn.com/ice9/jg-insta/60488025-0-Banner-2.png"
+                    alt="">
+            </div>
+
+            <div style="margin-top: -390px;
+                margin-left: 160px;
+                width: 440px;
+                height: 310px;">
+                <p
+                    style="margin-left:10px;color:white;font-size:38px;font-style:
+                    normal;padding:7px;">Learn with Simplilearn
+                    Get a Job-guaranteed*</p>
+
+                <div style="display: flex;flex-direction: column;">
+
+                    <div style="display: flex;flex-direction:row;width:
+                        100%;height:30px;
+                        margin-top: 20px;">
+                        <div>
+                            <img style="width: 30px;height:30px;margin-left:
+                                20px;"
+                                src="https://www.simplilearn.com/ice9/jg-insta/60455585-0-Group-2927.png"
+                                alt="">
+                        </div>
+                        <div>
+                            <h4 style="color:
+                                white;margin:7px;margin-left:15px;font-size:
+                                18px;">
+                                100% Job Guarantee*
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;flex-direction:row;width:
+                        100%;height:30px;
+                        margin-top: 20px;">
+                        <div>
+                            <img style="width: 30px;height:30px;margin-left:
+                                20px;"
+                                src="https://www.simplilearn.com/ice9/jg-insta/60455585-0-Group-2927.png"
+                                alt="">
+                        </div>
+                        <div>
+                            <h4 style="color:
+                                white;margin:7px;margin-left:15px;font-size:
+                                18px;">
+                                Career Mentoring and Interview Preparation
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;flex-direction:row;width:
+                        100%;height:30px;
+                        margin-top: 20px;">
+                        <div>
+                            <img style="width: 30px;height:30px;margin-left:
+                                20px;"
+                                src="https://www.simplilearn.com/ice9/jg-insta/60455585-0-Group-2927.png"
+                                alt="">
+                        </div>
+                        <div>
+                            <h4 style="color:
+                                white;margin:7px;margin-left:15px;font-size:
+                                18px;">
+                                300% - Maximum Salary Hike* (Till date)
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;flex-direction:row;width:
+                        100%;height:30px;
+                        margin-top: 20px;">
+                        <div>
+                            <img style="width: 30px;height:30px;margin-left:
+                                20px;"
+                                src="https://www.simplilearn.com/ice9/jg-insta/60455585-0-Group-2927.png"
+                                alt="">
+                        </div>
+                        <div>
+                            <h4 style="color:
+                                white;margin:7px;margin-left:15px;font-size:
+                                18px;">
+                                200+ Hiring Partners
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-left: 200px;">
+            *Disclaimer: Valid only for Simplilearn Job Guarantee Programs.
+            Please read the applicable Frequently Asked Questions (FAQs)
+            and Terms and Conditions (T&Cs) carefully prior to enrolment. Past
+            record is no guarantee of future prospects.
+
+        </div>
+
+        <div class="content-job">
+            <div class="content-job1">
+                <div style="margin-left: 170px;width:280px;height:50px;display:
+                    flex;flex-direction: column;">
+                    <h3 style="margin-top:30px;font-style: normal;">Launch your
+                        career in the hottest fields of the century</h3>
+                    <h3 style="margin-top: 10px; font-style:
+                        normal;color:#F39D20;">PROGRAMMING, DATA & DIGITAL
+                        MARKETING</h3>
+
+                </div>
+            </div>
+            <div style="margin-left: 150px;margin-top:40px;width: 220px;">
+                <img style="width:100px;height:70px"
+                    src="https://www.simplilearn.com/ice9/jg-insta/60500615-0-shape.png"
+                    alt="">
+                <h4 style="margin-top: -56px;margin-left:15px;font-size:
+                    19px;font-style: normal;">
+                    2+ million data, programming & digital marketing jobs are in
+                    India (As per Linkedin)
+                </h4>
+            </div>
+
+            <div style="margin-left: 150px;margin-top:40px;width: 220px;">
+                <img style="width:100px;height:70px"
+                    src="https://www.simplilearn.com/ice9/jg-insta/60500615-0-shape.png"
+                    alt="">
+                <h4 style="margin-top: -56px;margin-left:15px;font-size:
+                    19px;font-style: normal;">
+                    Now guarantee* yours and get the career kickstart you
+                    deserve.
+                </h4>
+            </div>
+        </div>
+
+        <div class="full-body">
+            <h1 style="margin-left: 540px;margin-top: 70px;">Job Guarantee
+                Programs</h1>
+            <div style="margin-left: -690px;margin-top: 130px;">
+                <div style="display: flex;flex-direction:row;">
+                    <div style="width: 370px;height:
+                        540px;background-color:#FFFFFF; border-radius: 3px;
+                        box-shadow: 1px 0px 8px 0px rgb(147, 144,
+                        144);font-style: normal;">
+
+                        <div>
+
+                            <img style="width: 330px;height:120px;margin: 10px;"
+                                src="https://www.simplilearn.com/ice9/jg-insta/60454465-0-FSJD-IND-and-US---IN.png"
+                                alt="">
+                            <div style="width:310px;height:60px">
+                                <h2 style="margin: 15px;">Full Stack Java
+                                    Developer
+                                    Job Guarantee Program</h1>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h4 style="color: #566374;margin:10px 20px 30px
+                                10px">
+                                Master the complete suite of full
+                                stack development skills in this
+                                intense and immersive Bootcamp.
+                                Complete the program and get a
+                                job as a software developer - Guaranteed!*
+                            </h3>
+                        </div>
+
+                        <div style="display: flex;flex-direction: row;">
+                            <div>
+                                <img style="width:
+                                    30px;height:30px;margin-left:15px;"
+                                    src="https://www.simplilearn.com/ice9/jg-insta/60376305-0-Placement-Icon.png"
+                                    alt="">
+
+                            </div>
+                            <div style="margin-left:10px;margin-top: 5px;">
+                                <h4>Average Salary : 6.57 LPA*</h4>
+                            </div>
+
+                        </div>
+
+                        <div style="display: flex;flex-direction: row;margin-top: 20px;">
+                            <div>
+                                <img style="width:
+                                    30px;height:30px;margin-left:15px;"
+                                    src="https://www.simplilearn.com/ice9/jg-insta/60376300-0-Trending-Icon.png"
+                                    alt="">
+
+                            </div>
+                            <div style="margin-left:10px;margin-top: 5px;">
+                                <h4>Average Salary Hike : 96.86%*</h4>
+                            </div>
+
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                            <button  class="btn btn-blue" style="width:180px;height:40px;color:white;
+                            background-color: #1179EF;border-radius: 5px;border: 1px solid #1179EF;
+                            margin-top: 40px;cursor: pointer;" type="button" id="btn-view" onclick="view_program"><h4 style="font-style: normal;">view program</h3></button>
+                        </div>
+
+                    </div>
+
+                </div>
+               
+            </div> 
+            <!-- second developer image -->
+            <div style="width: 370px;height:
+            540px;background-color:#FFFFFF; border-radius: 3px;margin-top:130px;margin-left: 30px;
+            box-shadow: 1px 0px 8px 0px rgb(147, 144,
+            144);font-style: normal;">
+
+            <div>
+
+                <img style="width: 330px;height:120px;margin: 10px;"
+                    src="https://www.simplilearn.com/ice9/jg-insta/60454460-0-DS-INDIA---INTRO-VID.png"
+                    alt="">
+                <div style="width:260px;height:60px">
+                    <h2 style="margin: 15px;">
+                        Data Science
+                         Job Guarantee 
+                        Program
+</h1>
+                </div>
+            </div>
+
+
+            <div>
+                <h4 style="color: #566374;margin:10px 20px 30px
+                    10px">
+                   Learn the most in-demand data science 
+                   skills in this cutting-edge applied bootcamp.
+                    Complete the program and get a job as a data 
+                    professional - Guaranteed!*
+                </h3>
+            </div>
+
+            <div style="display: flex;flex-direction: row;">
+                <div>
+                    <img style="width:
+                        30px;height:30px;margin-left:15px;"
+                        src="https://www.simplilearn.com/ice9/jg-insta/60376305-0-Placement-Icon.png"
+                        alt="">
+
+                </div>
+                <div style="margin-left:10px;margin-top: 5px;">
+                    <h4>Average Salary : 5.99 LPA*</h4>
+                </div>
+
+            </div>
+
+            <div style="display: flex;flex-direction: row;margin-top: 20px;">
+                <div>
+                    <img style="width:
+                        30px;height:30px;margin-left:15px;"
+                        src="https://www.simplilearn.com/ice9/jg-insta/60376300-0-Trending-Icon.png"
+                        alt="">
+
+                </div>
+                <div style="margin-left:10px;margin-top: 5px;">
+                    <h4>Average Salary Hike : 56.61%*</h4>
+                </div>
+
+            </div>
+            <div style="display: flex;justify-content: center;">
+                <button  class="btn btn-blue" style="width:180px;height:40px;color:white;
+                background-color: #1179EF;border-radius: 5px;border: 1px solid #1179EF;
+                margin-top: 40px;cursor: pointer;" type="button" id="btn-view1"><h4 style="font-style: normal;">view program</h3></button>
+            </div>
+
+        </div> 
+         <!-- end  -->
+          <!-- third developer -->
+          <div style="width: 370px;height:
+          540px;background-color:#FFFFFF; border-radius: 3px;margin-top:130px;margin-left: 30px;
+          box-shadow: 1px 0px 8px 0px rgb(147, 144,
+          144);font-style: normal;">
+
+          <div>
+
+              <img style="width: 330px;height:120px;margin: 10px;"
+                  src="https://www.simplilearn.com/ice9/jg-insta/Job_Guarantee_Programs.png"
+                  alt="">
+              <div style="width:260px;height:60px">
+                  <h2 style="margin: 15px;">
+                    Digital Marketing
+                    Job Guarantee Program
+</h1>
+              </div>
+          </div>
+
+
+          <div>
+              <h4 style="color: #566374;margin:10px 20px 30px
+                  10px">
+                 Master the most in-demand digital marketing 
+                 skills in this cutting-edge applied Bootcamp.
+                  Complete the program and get a job as a digital 
+                  marketing professional - Guaranteed!*
+              </h3>
+          </div>
+
+          <div style="display: flex;flex-direction: row;">
+              <div>
+                  <img style="width:
+                      30px;height:30px;margin-left:15px;"
+                      src="https://www.simplilearn.com/ice9/jg-insta/60376305-0-Placement-Icon.png"
+                      alt="">
+
+              </div>
+              <div style="margin-left:10px;margin-top: 5px;">
+                  <h4>Average Salary :5.5 LPA*</h4>
+              </div>
+
+          </div>
+
+          <div style="display: flex;flex-direction: row;margin-top: 20px;">
+              <div>
+                  <img style="width:
+                      30px;height:30px;margin-left:15px;"
+                      src="https://www.simplilearn.com/ice9/jg-insta/60376300-0-Trending-Icon.png"
+                      alt="">
+
+              </div>
+              <div style="margin-left:10px;margin-top: 5px;">
+                  <h4>Average Salary Hike : 52%*</h4>
+              </div>
+
+          </div>
+          <div style="display: flex;justify-content: center;">
+              <button  class="btn btn-blue" style="width:180px;height:40px;color:white;
+              background-color: #1179EF;border-radius: 5px;border: 1px solid #1179EF;
+              margin-top: 40px;cursor: pointer;" type="button" id="btn-view2"><h4 style="font-style: normal;">view program</h3></button>
+          </div>
+
+      </div> 
+            <!-- ned -->
+    </div>
+        <marquee><a style="color:red" href="https://www.simplilearn.com/">Click Here to Visit Simply Learn</a></marquee>
+
+        <div class="big-footer" style="margin-top:-25px">
+            <div style="margin-top:20px;display:flex;font-size:20px;padding:5px;color:white">
+                <p style="color:white;margin:20px;margin-top:20px;padding-top:15px">I am Shubham Shrivastwa <i style="color:yellow" class="fa fa-user"></i>
+                    ,and i from Motihari RajaBazaar. I am student of BCA 5th semester from the LND College Motihari,
+                    LND stands for the Laxmi Narayan Duby College. And this website made in spring boot as back-end &
+                    react or javaScript as front-end. The main Motive to build this website that we have also very well
+                    and powerful website but this actually consist all colleges , if we want to get any information about
+                    our college than we have to visit that website,if at the same occasion all college want to access that
+                    website for own use than it may a chance to server gives not responding properly <i style="color:red" class="fa fa-user"></i>
+                    if we have our own website than there may be not chance to load at Main website. so i think <i style="color:yellow" class="fa fa-user"></i>
+                    its goods for us.
+                </p>
+
+
+
+            </div>
+            <div style="display:flex;flex-direction:row;margin-left:50px">
+                <!--             1st div-->
+                <div style="color:white;width:auto;height:300px;margin-left:30px;margin-top:40px;
+                 display:flex;flex-direction:column;box-shadow: 1px 0px 8px 0px rgb(147, 144, 144);font-size:17px">
+
+                    <div>
+                        <h1 style="color:blue;margin-left:50px">Developer Address <i style="color:yellow" class="fa fa-home"></i></h1>
+
+                    </div>
+
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px">Shubham Shrivastwa</h4>
+                    </div>
+                    <div>
+                        <h4 style="margin-top:10px;margin-left:60px">Motihari East Champaran</h4>
+                    </div>
+
+                    <div>
+                        <h4 style="margin-top:10px;margin-left:60px">Java fullstack developer</h4>
+                    </div>
+                    <div>
+                        <h4 style="margin-top:10px;margin-left:60px">codecprogramming@gmail.com</h4>
+                    </div>
+
+                    <div>
+                        <i style="color:blue;margin-left:180px;margin-top:60px" class="fa fa-group"></i>
+                    </div>
+                </div>
+
+                <!--             2nd div-->
+
+                <div style="color:white;width:auto;height:auto;margin-left:30px;margin-top:40px;
+                 display:flex;flex-direction:column;box-shadow: 1px 0px 8px 0px rgb(147, 144, 144);">
+
+                    <div>
+                        <h1 style="color:blue;margin-left:10px">Visit Me(social media) <i style="color:yellow" class="fa fa-share"></i></h1>
+
+                    </div>
+
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px"><img style="width:30px;height:30px;margin-top:15px" src="https://cdn-icons-png.flaticon.com/512/145/145802.png"><a href="https://www.facebook.com/shubham.shrivastwa.16">&nbsp;&nbsp;&nbsp;&nbsp;Shubham Shrivastwa</a></h4>
+                    </div>
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px"><img style="width:30px;height:30px;" src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png"><a href="https://www.instagram.com/silentknight356/">&nbsp;&nbsp;&nbsp;&nbsp;silentknight356</a></h4>
+                    </div>
+
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px"><img style="width:30px;height:30px;" src="https://cdn-icons-png.flaticon.com/512/724/724664.png"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;+91 9508840645</a></h4>
+                    </div>
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px"><img style="width:30px;height:30px;" src="https://cdn-icons-png.flaticon.com/512/732/732200.png"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;codecprogramming@gmail.com</a></h4>
+                    </div>
+
+                </div>
+                <!--        3 div-->
+
+                <div style="color:white;width:380px;height:300px;margin-left:30px;margin-top:40px;
+                 display:flex;flex-direction:column;box-shadow: 1px 0px 8px 0px rgb(147, 144, 144);">
+
+                    <img style="height:100%" src="https://scontent-ccu1-1.xx.fbcdn.net/v/t39.30808-6/287847266_733060811171314_4786741532161543814_n.jpg?stp=dst-jpg_p180x540&_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qNmJJFscKsoAX8R24eg&tn=zvMRHYElo5IP4c8Z&_nc_ht=scontent-ccu1-1.xx&oh=00_AT9qhYNZrd_L7yykibQWVeP_9_wUrwayqAObnWM2S1W9Pw&oe=63268BC3" alt="">
+                </div>
+
+
+            </div>
+            <div style="margin-left: 640px;margin-top: 90px;">
+                <span class="rate" style="margin-top: -15px;">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label id="st5" for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label id="st4" for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label id="st3" for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label id="st2" for="star2" title="text">2 stars</label>
+                    <input type="radio" class="st1" id="star1" name="rate"
+                           value="1" />
+                    <label for="star1" id="st1" title="text">1 star</label>
+                </span>
+
+
+
+            </div>
+
+
+           
+        </div> 
+
+        <script src="script1.js"></script>
+        <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+        <script src="job.js"></script>
+        <script src="training.js"></script>
+        <script src="resouces.js"></script>
+        <script src="hire.js"></script>
+        <script src="nav.js"></script>
+
+    </body>
+</html>

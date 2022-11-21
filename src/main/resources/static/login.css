@@ -1,0 +1,27 @@
+body{
+
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,132,142,1) 57%, rgba(50,86,149,1) 100%);
+}
+
+.main-div{
+   display:flex;
+   margin-top:190px;
+   width:27%;
+   border-radius:20px;
+    box-shadow: 10px 5px 8px 8px gray;
+   background-color:#CABCCC;
+    height:340px;
+   margin-left:600px
+}
+
+::placeholder{
+color:white;
+}
+
+.field{
+color:white;
+font-size:22px;
+background: rgb(60,84,115);
+background: linear-gradient(90deg, rgba(60,84,115,1) 0%, rgba(115,141,179,1) 0%, rgba(72,96,122,1) 0%, rgba(108,149,167,0.9979342078628326) 2%, rgba(72,96,122,1) 100%);
+}

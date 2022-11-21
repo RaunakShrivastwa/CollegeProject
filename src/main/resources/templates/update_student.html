@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Student</title>
+    <link rel = "icon" href =
+            "https://cdn-icons-png.flaticon.com/512/1601/1601884.png"
+          type = "image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+       body {
+
+      background-color:#21486D;
+    }
+
+    .inner{
+         background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,132,142,1) 57%, rgba(50,86,149,1) 100%);
+
+    }
+   </style>
+
+</head>
+<body >
+<img style="width:130px;margin:20px" src="https://upload.wikimedia.org/wikipedia/en/0/0f/Babasaheb_Bhimrao_Ambedkar_Bihar_University_logo.png" alt="">
+<div class="container text-center">
+    <div style="margin-top:-70px;font-size:20px;background-color:#9CC549;width:140px;height:40px;display:flex;
+    justify-content:space-around;
+border-radius:5px;color:white;margin-left:477px"><p style="margin-top:6px">Students List</p>
+    </div>
+    <a title="Go Back to Home Page" href="/homepage"><img style="width:30px;margin-left:90%;margin-top:-60px" src="https://cdn-icons-png.flaticon.com/512/2028/2028276.png" alt="" srcset="">
+    </a>
+    <div style="margin-top:-20px">
+        <table class="table table-striped table-bordered" style="background:black;">
+            <thead class="thead-dark" style="background:cyan;width:auto">
+            <tr class="header">
+
+                <th><img style="width:30px;height:30px" src="https://cdn-icons-png.flaticon.com/512/1590/1590898.png" alt="">
+                    Image</th>
+
+                <th>ID</th>
+
+                <th><img style="width:30px;height:30px;margin-left:70px" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="">
+                     Email</th>
+                <th><img style="width:30px;height:30px" src="https://img.icons8.com/color/344/employee-card.png" alt="">
+                    Name</th>
+                <th><img style="width:30px;height:30px" src="https://img.icons8.com/offices/344/father.png" alt="">
+                    Title</th>
+                <th><img style="width:30px;height:30px" src="https://img.icons8.com/color/344/age.png" alt="">
+                     Age</th>
+                <th><img style="width:30px;height:30px" src="https://img.icons8.com/fluency/344/exam.png" alt="">
+                     Semester</th>
+                <th><img style="width:30px;height:30px" src="https://img.icons8.com/external-flat-lima-studio/344/external-status-notification-flat-lima-studio.png" alt="">
+                     Status</th>
+                <th><img style="width:30px;height:30px" src="https://cdn-icons-png.flaticon.com/512/6861/6861362.png" alt="">
+                    Delete</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user:${userList}" class="text-white">
+
+                <th style="background-color:black" scope="row"><img alt="" th:src="*{'data:image/jpeg;base64,'+{user.image}}" style="width: 60px;height: 60px;"></th>
+
+
+                <td style="background-color:black">[[*{user.id}]]
+
+
+
+                <td style="background-color:black">[[*{user.email}]]
+
+                <br>
+                <button type="button" class="btn btn-success btn-sm mt-2"
+                        data-toggle="modal"
+                        th:attr="data-target='#exampleModalCenter6'+*{user.id}">change
+                    Email</button> <!-- Modal -->
+
+
+                <div class="modal fade"
+                     th:id="*{'exampleModalCenter6'+{user.id}}" tabindex="-1"
+                     role="dialog" aria-labelledby="exampleModalCenterTitle"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header inner">
+                                <div  style="color:white;margin-left:30px;width:350px;height:40px;     box-shadow: 10px 0px 8px 0px gray;
+
+                                    ;border-radius:10px" class="modal-title inner"  id="exampleModalCenterTitle13">
+                                    <h4 style="margin-top:10px;margin-left:-20px">Change Student Email
+                                    </h4>
+                                </div>
+                                <button  style="margin-left:10px;color:red;font-size:60px" type="button" class="close" data-dismiss="modal"
+                                         aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="inner" style="width:500px;height:300px;">
+                                <form th:action="@{/changeEmail}" method="post" style="color:black;" >
+
+                                    <label style="margin-right:400px;margin-top:40px;font-size:16px;margin-left:26px;
+                                         color:white"><i  style="color:green" class="fa fa-th"></i>ID</label>
+                                    <input type="text" name="id" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" th:value="*{user.id}" >
+
+                                    <label style="margin-right:400px;margin-top:20px;font-size:16px;margin-left:26px;
+                                         color:white;width:130px"><i  style="color:green" class="fa fa-th"></i>New Email</label>
+                                    <input type="text" name="name" placeholder="Enter here" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" >
+
+                                    <br>
+                                    <button  type="submit" style="margin-top:10px;width:70px" class="btn btn-dark">Save</button>
+
+
+                                </form>
+
+                            </div>
+                            <!--                                <div class="modal-footer inner">-->
+                            <!--                                    <button type="button" class="btn btn-dark"-->
+                            <!--                                            data-dismiss="modal">Close</button>-->
+
+                            <!--                                </div>-->
+                        </div>
+                    </div>
+                </div>
+                </td>
+
+                <td style="background-color:black">[[*{user.firstName}]]
+
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm mt-2"
+                            data-toggle="modal"
+                            th:attr="data-target='#exampleModalCenter1'+*{user.id}">change
+                        Name</button> <!-- Modal -->
+
+
+                    <div class="modal fade"
+                         th:id="*{'exampleModalCenter1'+{user.id}}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header inner">
+                                    <div  style="color:white;margin-left:30px;width:350px;height:40px;     box-shadow: 10px 0px 8px 0px gray;
+
+                                    ;border-radius:10px" class="modal-title inner"  id="exampleModalCenterTitle111">
+                                        <h4 style="margin-top:10px;margin-left:-20px">Change Student Name
+                                        </h4>
+                                    </div>
+                                    <button  style="margin-left:10px;color:red;font-size:60px" type="button" class="close" data-dismiss="modal"
+                                             aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="inner" style="width:500px;height:300px;">
+                                    <form th:action="@{/changeName}" method="post" style="color:black;" >
+
+                                        <label style="margin-right:400px;margin-top:40px;font-size:16px;margin-left:26px;
+                                         color:white"><i  style="color:green" class="fa fa-th"></i>ID</label>
+                                        <input type="text" name="id" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" th:value="*{user.id}" >
+
+                                        <label style="margin-right:400px;margin-top:20px;font-size:16px;margin-left:26px;
+                                         color:white;width:130px"><i  style="color:green" class="fa fa-th"></i>New Name</label>
+                                        <input type="text" name="name" placeholder="Enter here" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" >
+
+                                        <br>
+                                        <button  type="submit" style="margin-top:10px;width:70px" class="btn btn-dark">Save</button>
+
+
+                                    </form>
+
+                                </div>
+                                <!--                                <div class="modal-footer inner">-->
+                                <!--                                    <button type="button" class="btn btn-dark"-->
+                                <!--                                            data-dismiss="modal">Close</button>-->
+
+                                <!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+
+                <td style="background-color:black">[[*{user.lastName}]]
+                    <!-- Button trigger modal -->
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm mt-2"
+                            data-toggle="modal"
+                            th:attr="data-target='#exampleModalCenter12'+*{user.id}">change
+                        Title</button> <!-- Modal -->
+
+
+                    <div class="modal fade"
+                         th:id="*{'exampleModalCenter12'+{user.id}}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header inner">
+                                    <div  style="color:white;margin-left:30px;width:350px;height:40px;     box-shadow: 10px 0px 8px 0px gray;
+
+                                    ;border-radius:10px" class="modal-title inner"  id="exampleModalCenterTitle18">
+                                        <h4 style="margin-top:10px;margin-left:-20px">Change Student Title
+                                        </h4>
+                                    </div>
+                                    <button  style="margin-left:10px;color:red;font-size:60px" type="button" class="close" data-dismiss="modal"
+                                             aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="inner" style="width:500px;height:300px;">
+                                    <form th:action="@{/title}" method="post" style="color:black;" >
+
+                                        <label style="margin-right:400px;margin-top:40px;font-size:16px;margin-left:26px;
+                                         color:white"><i  style="color:green" class="fa fa-th"></i>ID</label>
+                                        <input type="text" name="id" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" th:value="*{user.id}" >
+
+                                        <label style="margin-right:400px;margin-top:20px;font-size:16px;margin-left:26px;
+                                         color:white;width:130px"><i  style="color:green" class="fa fa-th"></i>New Title</label>
+                                        <input type="text" name="name" placeholder="Enter here" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" >
+
+                                        <br>
+                                        <button  type="submit" style="margin-top:10px;width:70px" class="btn btn-dark">Save</button>
+
+
+                                    </form>
+
+                                </div>
+                                <!--                                <div class="modal-footer inner">-->
+                                <!--                                    <button type="button" class="btn btn-dark"-->
+                                <!--                                            data-dismiss="modal">Close</button>-->
+
+                                <!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td style="background-color:black">[[*{user.age}]]
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm mt-2"
+                            data-toggle="modal"
+                            th:attr="data-target='#exampleModalCenter'+*{user.id}">change
+                        age</button> <!-- Modal -->
+
+
+                    <div class="modal fade"
+                         th:id="*{'exampleModalCenter'+{user.id}}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header inner">
+                                    <div  style="color:white;margin-left:30px;width:350px;height:40px;     box-shadow: 10px 0px 8px 0px gray;
+
+                                    ;border-radius:10px" class="modal-title inner"  id="exampleModalCenterTitle1">
+                                        <h4 style="margin-top:10px;margin-left:-20px">Change Student Age
+                                        </h4>
+                                    </div>
+                                    <button  style="margin-left:10px;color:red;font-size:60px" type="button" class="close" data-dismiss="modal"
+                                             aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="inner" style="width:500px;height:300px;">
+                                    <form th:action="@{/changeAge}" method="post" style="color:black;" >
+
+                                        <label style="margin-right:400px;margin-top:40px;font-size:16px;margin-left:26px;
+                                         color:white"><i  style="color:green" class="fa fa-th"></i>ID</label>
+                                        <input type="text" name="id" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" th:value="*{user.id}" >
+
+                                        <label style="margin-right:400px;margin-top:20px;font-size:16px;margin-left:26px;
+                                         color:white;width:130px"><i  style="color:green" class="fa fa-th"></i>New Age</label>
+                                        <input type="text" name="name" placeholder="Enter here" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" >
+
+                                        <br>
+                                        <button  type="submit" style="margin-top:10px;width:70px" class="btn btn-dark">Save</button>
+
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+                <td style="background-color:black">[[*{user.sem}]]
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm mt-2"
+                            data-toggle="modal"
+                            th:attr="data-target='#exampleModalCenter32'+*{user.id}">change
+                        Sem</button> <!-- Modal -->
+
+
+                    <div class="modal fade"
+                         th:id="*{'exampleModalCenter32'+{user.id}}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header inner">
+                                    <div  style="color:white;margin-left:30px;width:350px;height:40px;     box-shadow: 10px 0px 8px 0px gray;
+
+                                    ;border-radius:10px" class="modal-title inner"  id="exampleModalCenterTitle131">
+                                        <h4 style="margin-top:10px;margin-left:-20px">Change Student Semester
+                                        </h4>
+                                    </div>
+                                    <button  style="margin-left:10px;color:red;font-size:60px" type="button" class="close" data-dismiss="modal"
+                                             aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="inner" style="width:500px;height:300px;">
+                                    <form th:action="@{/changeSem}" method="post" style="color:black;" >
+
+                                        <label style="margin-right:400px;margin-top:40px;font-size:16px;margin-left:26px;
+                                         color:white"><i  style="color:green" class="fa fa-th"></i>ID</label>
+                                        <input type="text" name="id" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" th:value="*{user.id}" >
+
+                                        <label style="margin-right:400px;margin-top:20px;font-size:16px;margin-left:26px;
+                                         color:white;width:130px"><i  style="color:green" class="fa fa-th"></i>New Age</label>
+
+                                        <select id="cars" name="name" style="width:360px;height:40px;border-radius:5px">
+                                            <option value="">Semester</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+
+                                        <br>
+                                        <button  type="submit" style="margin-top:10px;width:70px" class="btn btn-dark">Save</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+                <td style="background-color:black">[[*{user.status}]]
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm mt-2"
+                            data-toggle="modal"
+                            th:attr="data-target='#exampleModalCenter312'+*{user.id}">change
+                        Status</button> <!-- Modal -->
+
+
+                    <div class="modal fade"
+                         th:id="*{'exampleModalCenter312'+{user.id}}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header inner">
+                                    <div  style="color:white;margin-left:30px;width:350px;height:40px;     box-shadow: 10px 0px 8px 0px gray;
+
+                                    ;border-radius:10px" class="modal-title inner"  id="exampleModalCenterTitle1310">
+                                        <h4 style="margin-top:10px;margin-left:-20px">Change Student Status
+                                        </h4>
+                                    </div>
+                                    <button  style="margin-left:10px;color:red;font-size:60px" type="button" class="close" data-dismiss="modal"
+                                             aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="inner" style="width:500px;height:300px;">
+                                    <form th:action="@{/changeStatus}" method="post" style="color:black;" >
+
+                                        <label style="margin-right:400px;margin-top:40px;font-size:16px;margin-left:26px;
+                                         color:white"><i  style="color:green" class="fa fa-th"></i>ID</label>
+                                        <input type="text" name="id" style="width:360px;height:40px;border-radius:5px;
+                                         box-shadow: 10px 0px 8px 0px gray;margin-left:-30px;font-size:17px" th:value="*{user.id}" >
+
+                                        <label style="margin-right:400px;margin-top:20px;font-size:16px;margin-left:26px;
+                                         color:white;width:130px"><i  style="color:green" class="fa fa-th"></i>New Age</label>
+
+                                        <select id="cars1" name="name" style="width:360px;height:40px;border-radius:5px">
+                                            <option value="">Status</option>
+                                            <option value="Good">Good</option>
+                                            <option value="Average">Average</option>
+                                            <option value="Low">Low</option>
+                                            <option value="Creative">Creative</option>
+                                        </select>
+
+                                        <br>
+                                        <button  type="submit" style="margin-top:10px;width:70px" class="btn btn-dark">Save</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+                <td style="background-color:black;margin-top:16px">
+                    <a style="margin-top:10px" th:href="@{/deleteProd/{id}(id=${user.id})}"class="btn btn-danger">Delete
+
+                    </a></td>-->
+
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div style="width:auto;height:200px;background-color:#E6ECEF;margin:70px;border-radius:6px;box-shadow: 1px 0px 8px 0px rgb(147, 144, 144);">
+        <a href="https://www.brabu.net/"> <img style="width:100%" src="https://www.brabu.net/images/demo/brabu_logo1.png" alt=""></a>
+    </div>
+
+</div>
+</body>
+</html>

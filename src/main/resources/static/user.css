@@ -1,0 +1,15 @@
+body{
+     background:cyan;
+
+}
+.list{
+      background:gray;
+}
+
+.header{
+    background:cyan;
+     height:auto;
+    box-shadow: 1px 0px 8px 0px gray;
+}
+
+

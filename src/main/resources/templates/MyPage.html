@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <!--    <link rel="stylesheet" href="style.css">-->
+    <style>
+
+       body {
+
+     background:linear-gradient(145deg, red 0 50%, gray 50% 100%);;
+    }
+   </style>
+</head>
+
+<body>
+
+<div  class="container" style="background:yellow;width:400px; margin-left:1300px;margin-top:10px">
+    <form th:action="@{/logout}" method="post">
+        <p>
+            Welcome  <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+        </p>
+    </form>
+</div>
+<div class="container d-flex align-items-center justify-content-around " >
+    <div class="text-center w-50">
+        <select class="form-control text-white" id='GFG_list' style="background:green">
+            <option value='Select Option'>Select Option</option>
+            <option value='View Employee'>View Employee</option>
+            <option value='Delete'>Delete</option>
+            <option value='Logout'>Logout</option>
+            <option value='home'>home</option>
+        </select>
+
+        <div >
+            <form th:action="@{/desc}" method="post"
+
+            >
+                <textarea name="area" placeholder="type here about you......"  style="margin-top:100px;width:650px;background:pink; height:300px;margin-right:250px" col="6"
+                          ></textarea>
+
+
+
+                <button type="submit" id="about" class="btn btn-warning">update</button>
+            </form>
+
+
+
+
+        </div>
+
+    </div>
+
+    <!--      <div>-->
+
+    <script>
+
+
+
+
+
+        document.getElementById('GFG_list').addEventListener('change', function() {
+          if(this.value=='View Employee')
+          {
+            window.location.href="/list_users";
+          }
+
+           if(this.value=='Delete')
+          {
+            window.location.href="/delete";
+          }
+            if(this.value=='Logout')
+          {
+            window.location.href="/LogOut";
+          }
+
+           if(this.value=='home')
+          {
+            window.location.href="/homepage";
+          }
+
+
+        });
+
+
+    </script>
+
+
+    <!--          <h3><a th:href="@{/list_users}">List All Employee</a></h3>-->
+    <!--          <h3><a th:href="@{/register}">Register</a></h3>-->
+    <!--          <h3><a th:href="@{/valide}">Login</a></h3>-->
+    <!--      </div>-->
+
+</div>
+</body>
+</html>

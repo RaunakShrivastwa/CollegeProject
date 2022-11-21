@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel = "icon" href =
+            "https://cdn-icons-png.flaticon.com/512/609/609803.png"
+          type = "image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    ,
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="body-main">
+
+
+<div id="header">
+
+    <div class="logo">
+    </div>
+    <div class="link">
+
+
+
+        <div style="display:flex;text-align: start;">
+            <div style="margin-left:-890px;">
+                <div  id="mySidebar" class="sidebar" style="height:300px">
+                    <a  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a title="View Students Records" id="show" href="/list_users"><i style="color:green" class="fa fa-eye"></i>&nbsp;View Students</a>
+                    <a title="View Teacher Records" href="/list_teachers"><i style="color:green" class="fa fa-eye"></i>&nbsp;View Teachers</a>
+                    <a title="Add Teachers"  href="/teacher"><i style="color:black" class="fa fa-user"></i>&nbsp; Teacher</a>
+                    <a title="Removed Teacher" href="/updateTeacher"><img style="color:red;width:20px" src="https://cdn-icons-png.flaticon.com/512/1601/1601884.png"></img>&nbsp;Update Teacher</a>
+                    <a title="Remove Students" href="/updateStudent"><img style="color:red;width:20px" src="https://cdn-icons-png.flaticon.com/512/1601/1601884.png"></img>&nbsp; Update Student</a>
+                    <a title="LogOut now" href="/LogOut"><img style="width:30px" src="https://cdn-icons-png.flaticon.com/512/1828/1828490.png" alt="">&nbsp;<p style="margin-left:37px;margin-top:-40px">LogOut</p> </a>
+
+
+
+                </div>
+
+
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">&#9776;Menu</button>
+
+                </div>
+            </div>
+        </div>
+
+        <p id="home"><i  style="color:green;" class="fa fa-home"></i>&nbsp;
+            HomePage</p>
+
+
+        <p id="RESOURCES"
+        ><i class="fa fa-id-card " style="color:green;"></i>&nbsp;
+            Registration</p>
+
+
+        <p id="job"><i style="color:green" class="fa fa-briefcase"></i>
+            &nbsp; Job Guarantee</p>
+
+        <p id="training"><i style="color:green" class="fa fa-user"></i>&nbsp;
+            About</p>
+
+        <p id="hire"><i class="fa fa-phone" style="color:green"></i>&nbsp;Contact Us</p>
+
+    </div>
+
+
+
+</div>
+
+
+<div id="header-2">
+
+
+
+    <div class="logo-2">
+        <div style="display:flex;width:70%">
+            <div style="display:flex;width:40%;">
+                <img
+                        src="https://www.brabu.net/images/demo/brabu_logo1.png"
+                        width="150px">
+                <div style="width:auto;" title="Cheak All Courses">
+                    <form action="https://bitmesra.ac.in/UploadedDocuments/pratyush_869/files/Menu_634035781865305000_bca.pdf">
+                        <button type="submit" class="All_Cources"
+                                style="margin-left: 20px;cursor: pointer;">
+                            <span>
+                                <i class="fa fa-th"></i>
+
+                                <h4 style="margin-right:10px">All Cources</h4>
+
+                            </span>
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+            <div style="display:flex;width:50%">
+                <input type="text" style="padding-left:4%;
+                            margin-left:10px;"
+                       placeholder="&#128269 what do you want learn?"
+                       class="search">
+            </div>
+        </div>
+        <div class="link-2">
+            <button class="login" title="Login">
+                <a href="/valide">Log in </a>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container1">
+
+
+
+    <div style="display:flex;flex-directioni:row;margin-top:20px;margin-left:200px">
+        <div>
+            <i style="color:black;" class="fa fa-desktop"></i>
+        </div>
+        <div>
+            <h style="margin-left:8px">Bachelor of
+                Computer Application!!!!</h>
+        </div>
+
+    </div>
+    <h1 style="margin-left:200px; margin-top: 10px;font-size:50px;">LND COLLEGE
+        MOTIHARI
+
+
+    </h1>
+    <div class="guaranteed">100% Facilities for Placement</div>
+    <div style="margin-left: 185px;margin-top: 20px;">
+                <span class="rate" style="margin-top: -15px;">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label id="st5" for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label id="st4" for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label id="st3" for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label id="st2" for="star2" title="text">2 stars</label>
+                    <input type="radio" class="st1" id="star1" name="rate"
+                           value="1" />
+                    <label for="star1" id="st1" title="text">1 star</label>
+                </span>
+
+        <h style="margin-left:-10px;margin-top: 30px;"
+           id="rating-counter">2% people
+        </h>
+
+    </div>
+
+    <h3 style="margin-left: 200px; margin-top: 20px;">Ranked #1 Best
+        Professional College
+        <a style="color: white;"
+           href="https://www.facebook.com/shubham.shrivastwa.16">B.R.B.U.</a>
+    </h3>
+
+    <p class="intro" style="margin-top: 20px;margin-left:200px">
+        There is facilities for Almost all Courses,
+        But here different and advanced management for the
+        BCA and All vocational courses.
+        there is facilities for well Computer lab.
+
+
+    </p>
+
+    <button class="status">College Status</button>
+
+    <div class="fees">
+        <div class="installment" style="background-color: red;
+                    width:130px;height:40px; margin-left: 200px; margin-top:
+                    20px;
+                    background-color: #21486D;
+                    ">
+            <h3>installment Fees</h3>
+            <h5 style="margin: 5px;">&nbsp;&nbsp;..........</h5>
+        </div>
+
+
+
+        <div class="installment" style="background-color:#21486D;
+                    width:130px;height:40px; margin-left: 347px; margin-top:
+                    -40px;
+                    border-left: 1px solid white;
+                    ">
+            <h3 style="margin-left: 10px;">Total Fees</h3>
+            <h5 style="margin:5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                13,500 rs</h5>
+        </div>
+
+
+    </div>
+
+    <div class="video-container">
+        <video loop="true" autoplay="autoplay" controls muted>
+            <source
+                    src="Top_5_Programming_Languages_In_2022__Best_Programming_Languages_To_Learn_In_2022__SimpliCode(720p).mp4">
+        </video>
+
+
+
+    </div>
+
+</div>
+
+<div class="m-box">
+    <div class="m-box-child">
+        <div style="background-color: white;width: 33%;
+                    border-right: 2px solid #D2D6DE;">
+            <h2 style="color: black;margin-top: 20px;margin-left:
+                        80px;">Admission open</h2>
+            <h2 style="margin-top:10px;margin-left:50px">.......................................
+            </h2>
+        </div>
+
+        <div style="background-color: white;width: 33%;
+                    border-right: 2px solid #D2D6DE;margin-top: 10px;">
+            <h2 style="color: black;margin-top:10px;margin-left:
+                        20px;">Course Duration: 6 month</h2>
+            <h4 style="margin-top:8px;margin-left: 40px;">Limited no. of
+                seats available</h4>
+        </div>
+
+        <div style="background-color: white;width: 40%;
+                    border-right: 2px solid #D2D6DE;">
+            <h2 style="margin-top: 20px; margin-left:100px;">Library
+                Available</h2>
+            <h4 style="margin-top: 6px;margin-left:100px;">with free of cost
+                book: with identity</h4>
+            <h5 style="margin-top: 6px;margin-left:120px;">Under
+                BCA department.</h5>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="mid-section">
+
+    <div class="mid-body">
+        <h1 style="margin-top:100px;margin-left: 225px;">World’s #1
+            Online Bootcamp</h1>
+        <div class="m-box-child1">
+
+            <div style="background-color: white;width: 33%;
+                        border-right: 2px solid #D2D6DE;display:
+                        flex;flex-direction: row;">
+                <div style="display:
+                            flex;flex-direction:row;margin-left: -20px;">
+                            <span class="rate" style="margin-top:25px;">
+                                <input type="radio" id="star5" name="rate"
+                                       value="5" />
+                                <label id="st5" for="star5" title="text">5 stars</label>
+                            </span>
+                    <h3 style="margin-top:25px;font-size: 40px;">4.5</h3>
+                    <img width="170px" height="55px" style="margin:
+                                20px;"
+                         src="https://www.simplilearn.com/ice9/assets/pg-page/switchup.png"
+                         alt="">
+
+                </div>
+            </div>
+
+            <div style="background-color: white;width: 33%;
+                        border-right: 2px solid #D2D6DE;margin-top: 10px;
+                        display: flex;flex-direction: row;">
+                <div style="margin-left: 60px; display:
+                            flex;flex-direction: row;">
+                            <span class="rate" style="margin-top:15px;
+                                margin-left: 10px;">
+                                <input type="radio" id="star5" name="rate"
+                                       value="5" />
+                                <label id="st5" for="star5" title="text">5 stars</label>
+                            </span>
+                    <h3 style="margin-top:15px;font-size: 40px;">4.5</h3>
+                    <img style="margin:15px" width="100px" height="50px"
+                         src="https://www.simplilearn.com/ice9/assets/pg-page/course-report.png"
+                         alt="">
+
+                </div>
+            </div>
+
+            <div style="background-color: white;width: 40%;
+                        ">
+                <div style="display:
+                            flex;flex-direction:row;margin-left:30px">
+                            <span class="rate" style="margin-top:25px;">
+                                <input type="radio" id="star5" name="rate"
+                                       value="5" />
+                                <label id="st5" for="star5" title="text">5 stars</label>
+                            </span>
+                    <h3 style="margin-top:25px;font-size: 40px;">4.5</h3>
+                    <img width="170px" height="55px" style="margin:
+                                20px;"
+                         src="https://www.simplilearn.com/ice9/assets/pg-page/switchup.png"
+                         alt="">
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="body-2">
+        <div style="display: flex;">
+            <i style="font-size: 25px; margin-left: 220px;margin-top:
+                        30px;"></i>
+            <!-- first box -->
+            <div style="display: flex;flex-direction: row;">
+                <div style="margin-top:50px;width:240px;height:200px;
+                            border-radius: 9px;box-shadow: 1px 0px 8px 0px
+                            gray;display: flex;flex-direction: column;
+                            ">
+
+                    <div style="width: 40px;height:40px;
+                                display: flex;
+                                margin-top:-27px;margin-left: 30px;
+                                background-color:white;border-radius:
+                                7px;box-shadow: 1px 0px 8px 0px gray;
+                                ">
+                        <img
+                                src="https://simplilearn.gumlet.io/ice9/assets/1_-_Accredited_by_AICTE_and_AACSB.svgz?w=50&dpr=1.3"
+                                alt="">
+                    </div>
+                    <p style="margin-top: 20px;font-size:23px; margin-left:30px"><b>
+                        Decade’s Hottest
+                        Career
+                    </b></p>
+
+                    <p style="margin-top: 20px;font-size:15px; margin-left:30px">
+                        2021 witnessed a 21% jump in professionals. Earn an average salary of INR 6.7 LPA.
+                    </p>
+                </div>
+
+                <!-- second box -->
+                <div style="margin-top:50px;width:240px;height:200px;margin-left: 30px;
+                        border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;display: flex;flex-direction: column;
+">
+
+                    <div style="width: 40px;height:40px;
+                        display: flex;
+                        margin-top:-27px;margin-left: 30px;
+                        background-color:white;border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;
+">
+                        <img src="https://simplilearn.gumlet.io/ice9/assets/4_-_Career_Growth.svgz?w=50&dpr=1.3" alt="">
+                    </div>
+                    <p style="margin-top: 20px;font-size:23px; margin-left:30px"><b>
+                        Guaranteed Job
+                    </b></p>
+
+                    <p style="margin-top: 50px;font-size:15px; margin-left:30px">
+                        100% money-back if you don't secure job within 6 months of graduation.  </p>                       </p>
+                </div>
+
+                <!-- third box -->
+                <div style="margin-top:50px;width:240px;height:200px;margin-left: 30px;
+                    border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;display: flex;flex-direction: column;
+">
+
+                    <div style="width: 40px;height:40px;
+                    display: flex;
+                    margin-top:-27px;margin-left: 30px;
+                    background-color:white;border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;
+">
+                        <img src="https://simplilearn.gumlet.io/ice9/JG/Career-Transitions.svgz?w=50&dpr=1.3" alt="">
+                    </div>
+                    <p style="margin-top: 20px;font-size:23px; margin-left:30px"><b>
+                        Gets You Interview Ready
+                    </b></p>
+
+                    <p style="margin-top: 30px;font-size:15px; margin-left:30px">
+                        Customised career mentoring session. Profile enhancement, mock interviews and regular feedback  </p>
+                </div>
+                <!-- fourth box -->
+                <div style="margin-top:50px;width:240px;height:200px;margin-left: 30px;
+                border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;display: flex;flex-direction: column;
+">
+
+                    <div style="width: 40px;height:40px;
+                display: flex;
+                margin-top:-27px;margin-left: 30px;
+                background-color:white;border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;
+">
+                        <img src="https://simplilearn.gumlet.io/ice9/JG/Easy-Financing-Options.svgz?w=50&dpr=1.3" alt="">
+                    </div>
+                    <p style="margin-top: 20px;font-size:23px; margin-left:30px"><b>
+                        0 Cost EMI
+                    </b></p>
+
+                    <p style="margin-top: 50px;font-size:15px; margin-left:30px">
+                        Get easy financing options at a 0% interest rate with no hidden costs.  </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- for the placement -->
+
+    <div style="margin-bottom:30px; margin-left: 680px; font-style: normal;">
+        <h2 >Our Alumni work in Top Companies</h2>
+    </div>
+    <div class="placement" >
+        <div >
+            <h2 style="font-style: normal; margin-left: 220px;margin-top: 20px;">Our Placement Stats</h2>
+
+
+
+        </div>
+
+        <!-- maximum percentage of placement -->
+        <div style="display: flex;flex-direction: column;width: 400px;
+               height: 430px; margin-top: 80px;margin-left: -320px;">
+
+            <!-- 1st placement state -->
+            <div style="width:100%;height: 120px; font-style: normal;
+                border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;
+                border-left: 6px solid #A0C9F9;">
+                <h4 style="color: #51565E; margin:20px">Maximum salary hike</h4>
+                <h1 style="color: #1179EF; margin:15px; margin-top: -10px;">316%</h1>
+            </div>
+
+            <!-- 2st placement state -->
+            <div style="width:100%;height: 120px; margin-top: 40px;font-style: normal;
+                 border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;border-left: 6px solid #A0C9F9;">
+                <h4 style="color: #51565E; margin:20px">Average salary hike</h4>
+                <h1 style="color: #1179EF; margin:15px; margin-top: -10px;">95%</h1>
+            </div>
+
+            <!-- 3st placement state -->
+            <div style="width:100%;height: 120px;margin-top: 40px;
+                 font-style: normal;
+                 border-radius: 4px;box-shadow: 1px 0px 8px 0px gray;border-left: 6px solid #A0C9F9;">
+                <h4 style="color: #51565E; margin:20px">Placement success rate</h4>
+                <h1 style="color: #1179EF; margin:15px; margin-top:-10px;">96%</h1>
+            </div>
+
+        </div>
+
+        <!-- for placement compney -->
+        <div style="width: 800px; height: 450px; border-radius: 9px;box-shadow: 1px 0px 8px 0px
+               gray;margin-top: 80px;
+               margin-left: 50px;display: flex;flex-direction: column;">
+
+            <!-- first row 1st compney -->
+            <div style="display: flex;flex-direction: row;">
+                <div style="margin-top: 40px;margin-left: 70px;">
+                    <a href="https://www.accenture.com/in-en?c=acn_glb_brandexpressiongoogle_12779745&n=psgs_0122&gclid=CjwKCAjw9NeXBhAMEiwAbaY4loJEifd57Vn7fpQZSn15W1e29sWRqKaKgtVY-oJE9nfhFXjML0dX_xoCeAcQAvD_BwE">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/Accenture.svgz?w=200&dpr=1.3" alt="">
+                    </a>
+
+                </div>
+
+                <!-- 2nd compney -->
+                <div style="margin-top: 50px;margin-left: 46px;">
+                    <a href="https://www.hcltech.coma/">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/HCL.svgz?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+                <!-- 3nd compney -->
+                <div style="margin-top: 44px;margin-left: 46px;">
+                    <a href="https://www.tcs.com/">
+                        <img style="width: 130px;" src="https://www.simplilearn.com/ice9/JG/TCS_Tata_Consultancy_Services.png" alt="">
+
+                    </a>
+                </div>
+
+                <!-- 4nd compney -->
+                <div style="margin-top: 46px;margin-left: 46px;">
+                    <a href="https://www.infosys.com/">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/Infosys.svgz?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+            </div>
+
+            <div style="display: flex;flex-direction: row;">
+
+                <!-- 2nd row 1st compney -->
+                <div style="margin-top: 40px;margin-left: 70px;">
+                    <a href="https://www.capgemini.com/">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/Capgemini.svgz?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+                <!-- 2st compney -->
+                <div style="margin-top: 40px;margin-left: 40px;">
+                    <a href="https://ust.com/">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/UST_Global.png?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+                <!-- 3st compney -->
+                <div style="margin-top: 40px;margin-left: 40px;">
+                    <a href="https://www2.deloitte.com/us/en.html">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/Deloitte.svgz?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+                <!-- 4st compney -->
+                <div style="margin-top: 40px;margin-left: 56px;">
+                    <a href="https://www.zeomega.com/">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/Zeomega.png?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+
+            </div>
+
+            <div style="display: flex;flex-direction: row;">
+                <div style="margin-top: 40px;margin-left: 70px;">
+                    <a href="https://corporate.comcast.com/">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/Comcast.png?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+                <!-- 2nd compney -->
+                <div style="margin-top: 50px;margin-left: 46px;">
+                    <a href="https://www.fisglobal.com/en/#business">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/FIS.png?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+                <!-- 3nd compney -->
+                <div style="margin-top: 74px;margin-left: 46px;">
+                    <a href="https://www.wissen.com/">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/Wissen_technology_logo.png?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+                <!-- 4nd compney -->
+                <div style="margin-top: 46px;margin-left: 46px;">
+                    <a href="https://www.clsa.com/">
+                        <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/CLSA_logo.png?w=200&dpr=1.3" alt="">
+
+                    </a>
+                </div>
+
+            </div>
+            <!-- 4th -->
+            <div style="display: flex;flex-direction: row;">
+                <div style="margin-top: 40px;margin-left: 70px;">
+                    <a href=""></a>
+                    <img style="width: 70px;" src="https://simplilearn.gumlet.io/ice9/logos/Wells-Fargo.png?w=200&dpr=1.3" alt="">
+                </div>
+
+                <!-- 2nd compney -->
+                <div style="margin-top: 50px;margin-left: 110px;">
+                    <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/IBS_Software_Logo.png?w=200&dpr=1.3" alt="">
+                </div>
+
+                <!-- 3nd compney -->
+                <div style="margin-top: 50px;margin-left: 46px;">
+                    <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/Principal_Global_Services_logo.png?w=200&dpr=1.3" alt="">
+                </div>
+
+                <!-- 4nd compney -->
+                <div style="margin-top: 46px;margin-left: 46px;">
+                    <img style="width: 130px;" src="https://simplilearn.gumlet.io/ice9/JG/ticketmaster.png?w=200&dpr=1.3" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--    for the teachers-->
+    <div style="width:100%;height:400px;">
+        <div class="full-body">
+            <h1 style="margin-left: 540px;margin-top: 70px;">LND COLLEGE
+                MOTIHARI</h1>
+            <div style="margin-left: -690px;margin-top: 130px;">
+                <div style="display: flex;flex-direction:row;">
+                    <div style="width: 370px;height:
+                        540px;background-color:#FFFFFF; border-radius: 3px;
+                        box-shadow: 1px 0px 8px 0px rgb(147, 144,
+                        144);font-style: normal;">
+
+                        <div>
+
+                            <img style="width: 330px;height:140px;margin: 10px;"
+                                 src="https://site7.brabucollegeerp.in/wp-content/uploads/2021/04/Prof.Dr_.-Arun-Kumar.jpg"
+                                 alt="">
+                            <div style="width:310px;height:80px">
+                                <h2 style="margin: 15px;">PROF. (DR.) ARUN KUMAR</h2>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h4 style="color: #566374;margin:10px 20px 30px
+                                10px">
+                                PROF. (DR.) ARUN KUMAR PRINCIPAL OF
+                                LND college Motihari.
+                                he is from the chemistry......
+                                qualification:-M.SC.,PH.D.
+                            </h4>
+                        </div>
+
+                        <div style="display: flex;flex-direction: row;">
+                            <div>
+                                <img style="width:
+                                    30px;height:30px;margin-left:15px;"
+                                     src="https://www.simplilearn.com/ice9/jg-insta/60376305-0-Placement-Icon.png"
+                                     alt="">
+
+                            </div>
+                            <div style="margin-left:10px;margin-top: 5px;">
+                                <h4>Average Salary : ............</h4>
+                            </div>
+
+                        </div>
+
+                        <div style="display: flex;flex-direction: row;margin-top: 20px;">
+                            <div>
+                                <img style="width:
+                                    30px;height:30px;margin-left:15px;"
+                                     src="https://www.simplilearn.com/ice9/jg-insta/60376300-0-Trending-Icon.png"
+                                     alt="">
+
+                            </div>
+                            <div style="margin-left:10px;margin-top: 5px;">
+                                <h4>Average Salary Hike :................</h4>
+                            </div>
+
+                        </div>
+                        <div style="display: flex;justify-content: center;">
+                            <button  class="btn btn-blue" style="width:180px;height:40px;color:white;
+                            background-color: #1179EF;border-radius: 5px;border: 1px solid #1179EF;
+                            margin-top: 40px;cursor: pointer;" type="button" id="btn-view" onclick="view_program"><h4 style="font-style: normal;">Visit</h4></button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- second developer image -->
+            <div style="width: 370px;height:
+            540px;background-color:#FFFFFF; border-radius: 3px;margin-top:130px;margin-left: 30px;
+            box-shadow: 1px 0px 8px 0px rgb(147, 144,
+            144);font-style: normal;">
+
+                <div>
+
+                    <img style="width: 330px;height:120px;margin: 10px;"
+                         src="https://site7.brabucollegeerp.in/wp-content/uploads/2021/04/Sarvesh.jpg"
+                         alt="">
+                    <div style="width:330px;height:60px">
+                        <h2 style="margin: 15px;">
+                            ASSISTANT PROFESSOR
+                            (DR.)SARVESH DUBEY
+                        </h2>
+                    </div>
+                </div>
+
+
+                <div>
+                    <h4 style="color: #566374;margin:10px 20px 30px
+                    10px">
+                        ASSISTANT PROFESSOR
+                        (DR.)SARVESH DUBEY
+                        LND college Motihari.
+                        he is from the physics......
+                        qualification:-M.SC., NET, PH.D.
+                    </h4>
+                </div>
+
+                <div style="display: flex;flex-direction: row;">
+                    <div>
+                        <img style="width:
+                        30px;height:30px;margin-left:15px;"
+                             src="https://www.simplilearn.com/ice9/jg-insta/60376305-0-Placement-Icon.png"
+                             alt="">
+
+                    </div>
+                    <div style="margin-left:10px;margin-top: 5px;">
+                        <h4>Average Salary : ............</h4>
+                    </div>
+
+                </div>
+
+                <div style="display: flex;flex-direction: row;margin-top: 20px;">
+                    <div>
+                        <img style="width:
+                        30px;height:30px;margin-left:15px;"
+                             src="https://www.simplilearn.com/ice9/jg-insta/60376300-0-Trending-Icon.png"
+                             alt="">
+
+                    </div>
+                    <div style="margin-left:10px;margin-top: 5px;">
+                        <h4>Average Salary Hike : ................</h4>
+                    </div>
+
+                </div>
+                <div style="display: flex;justify-content: center;">
+                    <button  class="btn btn-blue" style="width:180px;height:40px;color:white;
+                background-color: #1179EF;border-radius: 5px;border: 1px solid #1179EF;
+                margin-top: 40px;cursor: pointer;" type="button" id="btn-view1"><h4 style="font-style: normal;">Visit</h4></button>
+                </div>
+
+            </div>
+            <!-- end  -->
+            <!-- third developer -->
+            <div style="width: 370px;height:
+          540px;background-color:#FFFFFF; border-radius: 3px;margin-top:130px;margin-left: 30px;
+          box-shadow: 1px 0px 8px 0px rgb(147, 144,
+          144);font-style: normal;">
+
+                <div>
+
+                    <img style="width: 330px;height:120px;margin: 10px;"
+                         src="https://site7.brabucollegeerp.in/wp-content/uploads/2021/04/Rakesh-Ranjan.jpg"
+                         alt="">
+                    <div style="width:260px;height:60px">
+                        <h2 style="margin: 15px;">
+                            PROF. RAKESH RANJAN
+                            KUMAR
+                        </h2>
+                    </div>
+                </div>
+
+
+                <div>
+                    <h4 style="color: #566374;margin:10px 20px 30px
+                  10px">
+                        PROF. RAKESH RANJAN
+                        KUMAR
+                        LND college Motihari.
+                        he is from the GEOGRAPHY......
+                        qualification:-M.A., NET-JRF
+                    </h4>
+                </div>
+
+                <div style="display: flex;flex-direction: row;">
+                    <div>
+                        <img style="width:
+                      30px;height:30px;margin-left:15px;"
+                             src="https://www.simplilearn.com/ice9/jg-insta/60376305-0-Placement-Icon.png"
+                             alt="">
+
+                    </div>
+                    <div style="margin-left:10px;margin-top: 5px;">
+                        <h4>Average Salary :..................</h4>
+                    </div>
+
+                </div>
+
+                <div style="display: flex;flex-direction: row;margin-top: 20px;">
+                    <div>
+                        <img style="width:
+                      30px;height:30px;margin-left:15px;"
+                             src="https://www.simplilearn.com/ice9/jg-insta/60376300-0-Trending-Icon.png"
+                             alt="">
+
+                    </div>
+                    <div style="margin-left:10px;margin-top: 5px;">
+                        <h4>Average Salary Hike :.............</h4>
+                    </div>
+
+                </div>
+                <div style="display: flex;justify-content: center;">
+                    <button  class="btn btn-blue" style="width:180px;height:40px;color:white;
+              background-color: #1179EF;border-radius: 5px;border: 1px solid #1179EF;
+              margin-top: 40px;cursor: pointer;" type="button" id="btn-view2"><h4 style="font-style: normal;">Visit</h4></button>
+                </div>
+
+            </div>
+            <!-- ned -->
+        </div>
+
+        <div style="margin-left:120px">
+            <p style="font-size:18px;margin-top:30px;width:90%;height:auto;display:flex">
+                Laxmi Narain dubey College was started in the year 1966 in the district head quarter of
+                East-Champran, Motihari.To full fill the educational needs of this backward district.
+                It is situated in the head of town just in front of Sadar Hospital and Town Thana.
+                It imparts teaching right from Intermediate level to Honors level in every subject of
+                Science and Art's . This has a unit of Bachelor in Computer application ( B.C.A. )
+                teaching and a centre for Distance Education of B.R.A. Bihar University, Muzaffarpur.
+                The College was made a CONSTITUENT UNIT in 1980. The College is well reputed for its
+                Teaching, Discipline, and Fairness in Examination. It is approved by the University
+                Grants Commission, New Delhi under section 2(f) of the U. G. C. Act, 1956. The College
+                was established in 1970 and affiliated permanently in 1980 by the Bihar University,
+                Muzaffarpur (Bihar).More than 3,000 students are reading in the college, comprising OBC,
+                SC, ST, PH, Minorities & General Categories. Results are praiseworthy because many of
+                them have ranked in the University. The College awards each year a number of prizes to
+                students for high achievement in academic & extra-curricular activities. Scholarships and
+                other financial aid are given to deserving students on the basis of merit.
+
+                The College provides a liberal, lively and competitive environment enabling students
+                to carve out a niche for themselves in their chosen arenas. Besides the infrastructural
+                facilities, the strength of the College lies in its congenial and enriching atmosphere,
+                which plays a crucial role in maintaining the excellent record the College is renowned
+                for.Generations of students who have been groomed in this College have excelled in
+                different walks of life, with the years spent in the College providing them a solid
+                foundation on which they could craft their success. The College is committed to providing
+                the leadership and direction for the times ahead in every sphere of human enterprise
+                and endeavour.
+            <h2 style="color:red;margin-top:10px">VISION</h2>
+            The focus was on over all mental and moral growth of students. We are very much committed
+            to enrich learning environment for the empowerment of students to success in their life.
+
+            <h2 style="color:red;margin-top:10px">MISSION</h2>
+            Students belonging to the weaker section of the society, harried and disillusioned
+            in the wake of conflicting ideologies blind alleys and bewildering maze of modern life were
+            targeted in order to enable them to pursue a definite course. The ultimate benchmark of
+            this institution is not just a satisfied student but a delighted one. Mainstream courses
+            are imparted by taking recourse to leaner friendly communicative method. Emphasis is on
+            developing skills and strategies for personality growth. Since its inception, this
+            institution is catering to development of competencies, talents and creativity. The main
+            purpose of education is perfect transference of knowledge to the masses. Developing good
+            life in individuals and societal institutions purports to be the motto and mission of the
+            institution. Slowly and surely, pupils develop critical and creative thinking and
+            problem-solving abilities by becoming active participants in the learning process.
+            </p>
+        </div>
+
+        <div class="footer">
+
+                    <span style="color: rgb(181, 165, 165);margin-left: 500px;display: flex;margin-top: 15px;
+                    ">
+                        <i class="fa fa-mobile" style="width:30px"></i>
+                        <h6 style="font-style:normal;margin-left:-16px;font-size: 13px;margin-top: 5px;">Request a callback</h6>
+                    </span>
+
+
+            <span style="color: rgb(195, 184, 184);margin-left: 110px;display: flex;margin-top: 15px;
+                    ">
+                        <i class="fa fa-phone" style="width:30px"></i>
+                        <h6 style="font-style:normal;margin-left:-9px;font-size: 13px;margin-top: 5px;">Call us on
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9508840645</h6>
+                    </span>
+
+
+
+        </div>
+        <div style="width:100%;height:auto">
+            <div>
+                <a href="https://www.brabu.net/"><img title="Babashaheb Bhimrao Ambedkar University" src="https://i0.wp.com/www.muzcorner.in/wp-content/uploads/2020/02/Check-BRABU-Muzaffarpur-Result-Online.jpg?resize=1536%2C886&ssl=1" alt=""></a>
+            </div>
+
+            <div>
+                <a href="https://www.brabu.net/"><img title="Babashaheb Bhimrao Ambedkar University" src="https://www.brabu.net/images/demo/slider/6.jpg" alt=""></a>
+
+            </div>
+            <div>
+                <a href="localhost:8080/page"> <img title="LND College Motihari" style="width:100%" src="https://cache.careers360.mobi/media/presets/500X333/colleges/social-media/media-gallery/18472/2020/1/20/Campus%20Inside%20View%20of%20Laxmi%20Narain%20Dubey%20College%20Motihari_Campus-View.jpg" alt=""></a>
+            </div>
+
+        </div>
+
+       <marquee><div style="margin-left: 640px;margin-top:10px">
+                <span class="rate" style="margin-top: -15px;">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label id="st5" for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label id="st4" for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label id="st3" for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label id="st2" for="star2" title="text">2 stars</label>
+                    <input type="radio" class="st1" id="star1" name="rate"
+                           value="1" />
+                    <label for="star1" id="st1" title="text">1 star</label>
+                </span>
+
+
+
+       </div><a href="https://www.brabu.net/">Click Here</a></marquee>
+        <div class="big-footer" style="margin-top:-20px">
+            <div style="margin-top:20px;display:flex;font-size:20px;padding:5px;color:white">
+                <p style="color:white;margin:20px;margin-top:20px;padding-top:15px">I am Shubham Shrivastwa <i style="color:yellow" class="fa fa-smile"></i>
+                    ,and i from Motihari RajaBazaar. I am student of BCA 5th semester from the LND College Motihari,
+                    LND stands for the Laxmi Narayan Duby College. And this website made in spring boot as back-end &
+                    react or javaScript as front-end. The main Motive to build this website that we have also very well
+                    and powerful website but this actually consist all colleges , if we want to get any information about
+                    our college than we have to visit that website,if at the same occasion all college want to access that
+                    website for own use than it may a chance to server gives not responding properly <i style="color:red" class="fa fa-angry"></i>
+                    if we have our own website than there may be not chance to load at Main website. so i think <i style="color:yellow" class="fa fa-smile"></i>
+                    its goods for us.
+                </p>
+
+
+
+            </div>
+
+            <div style="display:flex;flex-direction:row;margin-left:120px">
+                <!--             1st div-->
+                <div style="color:white;width:380px;height:300px;margin-left:30px;margin-top:40px;
+                 display:flex;flex-direction:column;box-shadow: 1px 0px 8px 0px rgb(147, 144, 144);">
+
+                    <div>
+                        <h1 style="color:blue;margin-left:50px">Developer Address <i style="color:yellow" class="fa fa-home"></i></h1>
+
+                    </div>
+
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px">Shubham Shrivastwa</h4>
+                    </div>
+                    <div>
+                        <h4 style="margin-top:10px;margin-left:60px">Motihari East Champaran</h4>
+                    </div>
+
+                    <div>
+                        <h4 style="margin-top:10px;margin-left:60px">Java fullstack developer</h4>
+                    </div>
+                    <div>
+                        <h4 style="margin-top:10px;margin-left:60px">codecprogramming@gmail.com</h4>
+                    </div>
+
+                    <div>
+                        <i style="color:blue;margin-left:180px;margin-top:60px" class="fa fa-group"></i>
+                    </div>
+                </div>
+
+                <!--             2nd div-->
+
+                <div style="color:white;width:380px;height:300px;margin-left:30px;margin-top:40px;
+                 display:flex;flex-direction:column;box-shadow: 1px 0px 8px 0px rgb(147, 144, 144);">
+
+                    <div>
+                        <h1 style="color:blue;margin-left:10px">Visit Me(social media) <i style="color:yellow" class="fa fa-share"></i></h1>
+
+                    </div>
+
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px"><img style="width:30px;height:30px;margin-top:15px" src="https://cdn-icons-png.flaticon.com/512/145/145802.png"><a href="https://www.facebook.com/shubham.shrivastwa.16">&nbsp;&nbsp;&nbsp;&nbsp;Shubham Shrivastwa</a></h4>
+                    </div>
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px"><img style="width:30px;height:30px;" src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png"><a href="https://www.instagram.com/silentknight356/">&nbsp;&nbsp;&nbsp;&nbsp;silentknight356</a></h4>
+                    </div>
+
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px"><img style="width:30px;height:30px;" src="https://cdn-icons-png.flaticon.com/512/724/724664.png"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;+91 9508840645</a></h4>
+                    </div>
+                    <div>
+                        <h4 style="margin-top:20px;margin-left:60px"><img style="width:30px;height:30px;" src="https://cdn-icons-png.flaticon.com/512/732/732200.png"><a href="">&nbsp;&nbsp;&nbsp;&nbsp;codecprogramming@gmail.com</a></h4>
+                    </div>
+
+                </div>
+                <!--        3 div-->
+
+                <div style="color:white;width:380px;height:300px;margin-left:30px;margin-top:40px;
+                 display:flex;flex-direction:column;box-shadow: 1px 0px 8px 0px rgb(147, 144, 144);">
+
+                    <img style="height:100%" src="https://scontent-ccu1-1.xx.fbcdn.net/v/t39.30808-6/287847266_733060811171314_4786741532161543814_n.jpg?stp=dst-jpg_p180x540&_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=qNmJJFscKsoAX8R24eg&tn=zvMRHYElo5IP4c8Z&_nc_ht=scontent-ccu1-1.xx&oh=00_AT9qhYNZrd_L7yykibQWVeP_9_wUrwayqAObnWM2S1W9Pw&oe=63268BC3" alt="">
+                </div>
+
+
+
+
+            </div>
+
+            <div style="margin-left: 640px;margin-top: 90px;">
+                <span class="rate" style="margin-top: -15px;">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label id="st5" for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label id="st4" for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label id="st3" for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label id="st2" for="star2" title="text">2 stars</label>
+                    <input type="radio" class="st1" id="star1" name="rate"
+                           value="1" />
+                    <label for="star1" id="st1" title="text">1 star</label>
+                </span>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+</script>
+
+<script src="script1.js"></script>
+<script src="job.js"></script>
+<script src="training.js"></script>
+<script src="resouces.js"></script>
+<script src="hire.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

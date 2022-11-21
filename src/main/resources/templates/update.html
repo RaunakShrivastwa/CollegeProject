@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Users</title>
+<!--    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+
+   </style>
+
+</head>
+<body >
+<div class="container text-center" >
+    <div style="background:yellow;width:200px;margin-left:1200px;margin-top:10px">
+        <form th:action="@{/logout}" method="post">
+            <p>
+                Welcome  <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+            </p>
+        </form>
+    </div>
+    <div class="text-white">
+        <h1>Updation Service</h1>
+    </div>
+
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr class="header">
+
+                <th>User ID</th>
+                <th>Image</th>
+                <th>E-mail</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Delete</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user:${userList}" class="text-white">
+                <td>[[*{user.id}]]
+                </td>
+                <td scope="row">
+                     <img alt="" th:src="*{'data:image/jpeg;base64,'+{user.image}}" style="width: 100px;height: 100px;">
+
+
+                </td>
+
+                <td>[[*{user.email}]]
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm mt-2"
+                            data-toggle="modal"
+                            th:attr="data-target='#exampleModalCenter'+*{user.id}">Change
+                        Email</button> <!-- Modal -->
+
+
+                    <div class="modal fade"
+                         th:id="*{'exampleModalCenter'+{user.id}}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle1">change
+                                        Employee Email</h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" >
+                                    <form action="/updateemail" method="Get" >
+                                        <div class="form-group">
+                                            <label>Employee id</label> <input type="text"
+                                                                             th:value="*{user.id}" class="form-control" name="id">
+                                            <label>New Employee Email</label> <input type="text"
+                                                                                   name="newemail" class="form-control"> <br>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+
+                <td>[[*{user.firstName}]]
+
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm mt-2"
+                            data-toggle="modal"
+                            th:attr="data-target='#exampleModalCenterDesc'+${user.id}">Change
+                        FirstName</button> <!-- Modal -->
+                    <div class="modal fade"
+                         th:id="*{'exampleModalCenterDesc'+{user.id}}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle2">change
+                                        Emoloyee FirstName</h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form action="/changeFirstName" method="Get">
+                                        <div class="form-group">
+                                            <label>Employee id</label> <input type="text"
+                                                                             th:value="*{user.id}" class="form-control" name="id">
+                                            <label>New Employee FirstName</label> <input type="text"
+                                                                                          name="firstName" class="form-control"> <br>
+                                            <button type="submit" class="btn btn-primary">submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>[[*{user.lastName}]]
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm mt-2"
+                            data-toggle="modal"
+                            th:attr="data-target='#exampleModalCenterPrice'+${user.id}">Change
+                        LastName</button> <!-- Modal -->
+                    <div class="modal fade"
+                         th:id="*{'exampleModalCenterPrice'+{user.id}}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">change
+                                        LastName</h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form action="/changeLastName" method="Get">
+                                        <div class="form-group">
+                                            <label>Employee id</label> <input type="text"
+                                                                             th:value="*{user.id}" class="form-control" name="id">
+                                            <label>New Employee LastName</label> <input type="text"
+                                                                                    name="last" class="form-control"> <br>
+                                            <button type="submit" class="btn btn-primary">submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+                <td><a th:href="@{/deleteProd/{id}(id=${user.id})}"
+                       class="btn btn-danger" title="Only admin can delete">Delete</a></td>
+            </tr>
+            </tbody>
+
+        </table>
+        <div>
+            <a th:href="@{/page}"><button type="button" title="your page back now" class="btn btn-warning">Back</button></a>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Page</title>
+
+    <style>
+
+       body {
+
+     background:linear-gradient(45deg, cyan 0 50%, blue 50% 100%);;
+    }
+   </style>
+
+</head>
+<body >
+
+   <div >
+       <form th:action="@{/fordelete}" style="margin-top:220px">
+           <div align="center" class="form-group" >
+               <h1>Deleted By Email</h1>
+               <input type="email" style="width:300px; height:30px; border-radius:20px" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter Email">
+               <button style="border-radius:5px; height:30px; background:gray" type="submit">Conform</button>
+           </div>
+       </form>
+   </div>
+</body>
+</html>

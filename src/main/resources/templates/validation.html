@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <title>Login Section</title>
+    <link rel = "icon" href =
+            "https://cdn-icons-png.flaticon.com/512/295/295128.png"
+          type = "image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Login Page</title>
+
+    <style>
+
+     body{
+
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,132,142,1) 57%, rgba(50,86,149,1) 100%);
+
+}
+   </style>
+</head>
+<body >
+
+<div class="container" style="margin-top:140px;">
+    <div class="row" >
+        <div class="col-md-6 offset-md-3">
+
+            <div class="card" style="background:#CABCCC; width:500px; height:320px;margin-top:80px;
+            border-radius:20px; box-shadow: 10px 5px 8px 8px gray;">
+
+                <div class="card-body">
+
+                    <a href="/enfo"><img style="width:160px;margin-left:140px;margin-top:-120px" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbmUiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+PHBhdGggZD0iTTg2LDE3MmMtNDcuNDk2NDksMCAtODYsLTM4LjUwMzUxIC04NiwtODZ2MGMwLC00Ny40OTY0OSAzOC41MDM1MSwtODYgODYsLTg2djBjNDcuNDk2NDksMCA4NiwzOC41MDM1MSA4Niw4NnYwYzAsNDcuNDk2NDkgLTM4LjUwMzUxLDg2IC04Niw4NnoiIGZpbGw9IiMwYTAzMDMiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTEyNS42Njc1LDEwOS45NjE1M2MwLC00LjkwMzI5IC0yLjk3MjE2LC05LjU3NDM4IC04LjM2MzA3LC0xMy4yNTA4OGMtNy4wNjY2MiwtNC44MTgxNSAtMTguNDQ4MjksLTguMDM0MTIgLTMxLjMwNDQzLC04LjAzNDEyYy0xMi44NTYxNCwwIC0yNC4yMzc4MSwzLjIxNTk3IC0zMS4zMDQ0Myw4LjAzNDEyYy01LjM5MDkxLDMuNjc2NSAtOC4zNjMwNyw4LjM0NzU5IC04LjM2MzA3LDEzLjI1MDg4djUuNjE1MzdjMCwxLjc0MTUgMC42OTI3MywzLjQxNzIxIDEuOTI3MjYsNC42NTE3NGMxLjIzNDUzLDEuMjMwNjYgMi45MDYzNywxLjkyNzI2IDQuNjUxNzQsMS45MjcyNmw2Ni4xNzcsLTAuMDAzODdjMS43NDUzNywwLjAwMzg3IDMuNDE3MjEsLTAuNjkyNzMgNC42NTE3NCwtMS45MjMzOWMxLjIzNDUzLC0xLjIzNDUzIDEuOTI3MjYsLTIuOTEwMjQgMS45MjcyNiwtNC42NTU2MXpNMTE5Ljg2MjUsMTA5Ljk2NTQxdjUuNjExNWMwLDAuMjA1MTEgLTAuMDgxMjcsMC4zOTg2MSAtMC4yMjgzMywwLjU0NTY3Yy0wLjE0MzE5LDAuMTQzMTkgLTAuMzQwNTYsMC4yMjgzMyAtMC41NDU2NywwLjIyODMzaC02Ni4xNzdjLTAuMjA1MTEsMCAtMC40MDI0OCwtMC4wODUxNCAtMC41NDU2NywtMC4yMjgzM2MtMC4xNDcwNiwtMC4xNDcwNiAtMC4yMjgzMywtMC4zNDA1NiAtMC4yMjgzMywtMC41NDU2N2MwLC0wLjAwMzg3IDAsLTUuNjExNSAwLC01LjYxMTVjMCwtMy4yMTU5NyAyLjI5NDkxLC02LjA0ODgxIDUuODMyMDksLTguNDU1OTVjNi4zMTU4NCwtNC4zMTExOCAxNi41MzY1MSwtNy4wMjc5MiAyOC4wMzA0MSwtNy4wMjc5MmMxMS40OTM5LDAgMjEuNzE0NTcsMi43MTY3NCAyOC4wMzA0MSw3LjAyNzkyYzMuNTM3MTgsMi40MDcxNCA1LjgzMjA5LDUuMjM5OTggNS44MzIwOSw4LjQ1NTk1ek04Niw0Mi43NzA1OWMtMTEuNzQ5MzIsMCAtMjEuMjg1LDkuNTM1NjggLTIxLjI4NSwyMS4yODVjMCwxMS43NDkzMiA5LjUzNTY4LDIxLjI4NSAyMS4yODUsMjEuMjg1YzExLjc0OTMyLDAgMjEuMjg1LC05LjUzNTY4IDIxLjI4NSwtMjEuMjg1YzAsLTExLjc0OTMyIC05LjUzNTY4LC0yMS4yODUgLTIxLjI4NSwtMjEuMjg1ek04Niw0OC41NzU2YzguNTQ0OTYsMCAxNS40OCw2LjkzNTA0IDE1LjQ4LDE1LjQ4YzAsOC41NDQ5NiAtNi45MzUwNCwxNS40OCAtMTUuNDgsMTUuNDhjLTguNTQ0OTYsMCAtMTUuNDgsLTYuOTM1MDQgLTE1LjQ4LC0xNS40OGMwLC04LjU0NDk2IDYuOTM1MDQsLTE1LjQ4IDE1LjQ4LC0xNS40OHoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==" alt=""></a>
+
+                    <form  th:action="@{/dologin}" method="post" >
+
+                        <div th:if="${param.error}" class="text-danger">
+
+                            Invalid User and Password
+                        </div>
+                        <div class="form-group">
+                            <img style="width:40px" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input placeholder="Type here" type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <img style="width:40px" src="https://cdn-icons-png.flaticon.com/512/3427/3427189.png" alt="">  <label for="exampleInputPassword1">Password</label>
+                            <input placeholder="Type here" type="password" name="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                         <div class="form-group">
+                             <input type="checkbox"> <p style="color:blue;margin-top:-24px;
+                           margin-left:50px">Remember me</p>
+                         </div>
+                        <button style="width:360px;border-radius:10px;height:50px;border:1px solid gray;
+                        margin-left:50px;margin-top:-5px;background-color:gray;color:white" type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
